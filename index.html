@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Table of Person</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        Hello World
+    <body ng-controller="MainCtrl">
+        <div class="list-group" ng-repeat="article in items.results">
+                <img src = {{article.multimedia[1].url}}>
+                <h4 class="list-group-item-heading">{{article.title}}</h4>
+                <p class="list-group-item-text">{{article.abstract}}</p>
+        </div>
+        <script src="bundle.js"></script>
     </body>
 </html>

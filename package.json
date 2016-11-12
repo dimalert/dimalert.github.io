@@ -1,0 +1,27 @@
+{
+  "name": "dimalert.github.io",
+  "version": "1.0.0",
+  "description": "Simple App",
+  "main": "bundle.js",
+  "dependencies": {
+    "angular-mocks": "^1.5.8"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "browserify": "^13.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify node_modules/angular/angular.min.js script.js  -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimalert/dimalert.github.io.git"
+  },
+  "author": "Kirill Tsibikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimalert/dimalert.github.io/issues"
+  },
+  "homepage": "https://github.com/dimalert/dimalert.github.io#readme"
+}
