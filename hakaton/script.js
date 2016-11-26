@@ -24,14 +24,20 @@ $(document).ready(function () {
 		newCanvas();
 	});
 	$("#draw").click(function () {
-		var canvasData =document.getElementById("canvas").toDataURL("image/png");
+		var dataURL = document.getElementById("canvas").toDataURL();
 		$.ajax({
-			url:'save.php', 
-			type:'POST', 
-			data:{
-				data:canvasData
+			type: "POST",
+			url: "save.php",
+			data: { 
+				imgBase64: dataURL
 			}
-		});
+			}).done(function(o) {
+			console.log('saved'); 
+			// If you want the file to be visible in the browser 
+			// - please modify the callback in javascript. All you
+			// need is to return the url to the file, you just saved 
+			// and than put the image in your browser.
+			});
 	});
 });
 
@@ -57,7 +63,7 @@ function newCanvas() {
 $.fn.drawTouch = function () {
 	var start = function (e) {
         e = e.originalEvent;
-		//ctx.beginPath();
+		ctx.beginPath();
 		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY;
 		ctx.moveTo(x, y);
@@ -78,7 +84,7 @@ $.fn.drawTouch = function () {
 $.fn.drawPointer = function () {
 	var start = function (e) {
         e = e.originalEvent;
-		//ctx.beginPath();
+		ctx.beginPath();
 		var br = this.getBoundingClientRect()
 		x = e.pageX - br.left;
 		y = e.pageY - br.top;
@@ -102,7 +108,7 @@ $.fn.drawMouse = function () {
 	var clicked = 0;
 	var start = function (e) {
 		clicked = 1;
-		//ctx.beginPath();
+		ctx.beginPath();
 		var br = this.getBoundingClientRect()
 		x = e.pageX - br.left;
 		y = e.pageY - br.top;
