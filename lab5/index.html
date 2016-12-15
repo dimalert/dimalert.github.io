@@ -22,13 +22,13 @@
         </div>
         <div class="wrap_form" ng-show="is_articleAdded">
             <label class="name_input">Title</label>
-            <input class="input_form" type="text">
-            <label class="name_input">Title</label>
-            <input class="input_form" type="text">
-            <label class="name_input">Title</label>
-            <input class="input_form" type="text">
+            <input class="input_form" type="text" ng-model="article_adding.title">
+            <label class="name_input">Body</label>
+            <textarea class="input_form" type="text" ng-model="article_adding.abstract"></textarea>
+            <label class="name_input">Link</label>
+            <input class="input_form" ng-model="article_adding.url"" type="text">
             <div>
-                <button ng-click="is_articleAdded = false;">Save</button>
+                <button ng-click="saveArticle();">Save</button>
                 <button ng-click="is_articleAdded = false;">Cancel</button>
             </div>
         </div>

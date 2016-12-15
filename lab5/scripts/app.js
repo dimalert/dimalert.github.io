@@ -36,6 +36,21 @@ var myApp = angular.module('app', [])
     });
     myApp.controller("FormCtrl", function($scope){
         $scope.is_articleAdded = false;
+        
+        function Article() {
+            this.title = "";
+            this.url = "";
+            this.multimedia = [,,,,{url: "static/cap.jpg"}];
+            this.abstract = "";
+        }
+        
+        $scope.article_adding = new Article();
+        
+        $scope.saveArticle = function() {
+          $scope.articles.push($scope.article_adding);
+          $scope.article_adding = new Article();
+          $scope.is_articleAdded = false;
+        };
     });
 
 
