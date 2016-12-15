@@ -11,8 +11,7 @@
     "browserify": "^13.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify node_modules/angular/angular.min.js script.js  -o bundle.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
