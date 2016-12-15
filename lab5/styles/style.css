@@ -50,10 +50,17 @@ p {
     position: fixed;
     top: 0;
 }
-.logo {
-    /*padding-left: 10%;*/
+.logo img{
     max-width: 300px;
-    /*padding-top: 60px;*/
+}
+.logo {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 button {
     font-weight: 700;

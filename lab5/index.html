@@ -16,10 +16,11 @@
     <div class="b_header" ng-controller="FormCtrl">
         <div class="logo">
             <img src="static/logo.svg">
+            <div class="row_button" ng-class="{'button_add': is_articleAdded}">
+                <button class="Button" ng-click="is_articleAdded = true;">Add Article</button>
+            </div>
         </div>
-        <div class="row_button" ng-class="{'button_add': is_articleAdded}">
-            <button class="Button" ng-click="is_articleAdded = true;">Add Article</button>
-        </div>
+        
         <div class="wrap_form" ng-show="is_articleAdded">
             <label class="name_input">Title</label>
             <input class="input_form" type="text" ng-model="article_adding.title">
