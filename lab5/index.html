@@ -12,10 +12,10 @@
     <meta name="viewport" content="width=device-width" />
 </head>
 
-<body ng-controller="MainCtrl">
+<body>
     <div class="b_header" ng-controller="FormCtrl">
         <div class="logo">
-            <img src="static/logo.svg">
+            <img src="mock/logo.svg">
             <div class="row_button" ng-class="{'button_add': is_articleAdded}">
                 <button class="Button" ng-click="is_articleAdded = true;">Add Article</button>
             </div>
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="articles">
+    <div class="articles" ng-controller="MainCtrl">
         <div class="articles_set" ng-repeat="article in articles">
             <img src={{article.multimedia[4].url}}>
             <a href={{article.url}}>{{article.title}}</a>
