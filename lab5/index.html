@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width" />
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
     <div class="b_header" ng-controller="FormCtrl">
         <div class="logo">
             <img src="mock/logo.svg">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="articles" ng-controller="MainCtrl">
+    <div class="articles">
         <div class="articles_set" ng-repeat="article in articles">
             <img src={{article.multimedia[4].url}}>
             <a href={{article.url}}>{{article.title}}</a>
