@@ -13,7 +13,9 @@
 </head>
 
 <body ng-controller="MainCtrl">
+
     <div class="b_header" ng-controller="FormCtrl">
+
         <div class="logo">
             <img src="mock/logo.svg">
             <div class="row_button" ng-class="{'button_add': is_articleAdded}">
@@ -22,26 +24,36 @@
         </div>
         
         <div class="wrap_form" ng-show="is_articleAdded">
+
             <label class="name_input">Title</label>
             <input class="input_form" type="text" ng-model="article_adding.title">
             <label class="name_input">Body</label>
             <textarea class="input_form" type="text" ng-model="article_adding.abstract"></textarea>
             <label class="name_input">Link</label>
             <input class="input_form" ng-model="article_adding.url"" type="text">
+
             <div>
                 <button ng-click="saveArticle();">Save</button>
                 <button ng-click="is_articleAdded = false;">Cancel</button>
             </div>
+
         </div>
     </div>
+
     <div class="articles">
-        <div class="articles_set" ng-repeat="article in articles">
+        <div class="articles_set" ng-repeat="article in articles | limitTo : filter">
             <img src={{article.multimedia[4].url}}>
             <a href={{article.url}}>{{article.title}}</a>
             <p class="list-group-item-text">{{article.abstract}}</p>
         </div>
+        
+        <div class="filter">
+            <h2>Filter</h2>
+            <input class="input_form" style="width: 80%" type="text"  ng-model="filter" ></input>
+        </div>
     </div>
+
+   
     <script src="scripts/app.js"></script>
 </body>
-
 </html>

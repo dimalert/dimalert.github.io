@@ -1,5 +1,4 @@
 'use strict';
-var datat = {};
 var URL = 'https://api.nytimes.com/svc/topstories/v1/travel.json?api-key=7f64edc5d0804574800d7a8b9da058ad';
 var myApp = angular.module('app', [])
     .controller("MainCtrl", function($scope, dataService){
@@ -22,13 +21,14 @@ var myApp = angular.module('app', [])
                     }
                         
                     $scope.$apply();
-                    console.log(data);
                 });  
             }  
         );
 
     });
     myApp.service("dataService", function() {
+
+        var scope = this;
 
         this.getArticles = function(callback) {
              fetch(URL)  
@@ -39,7 +39,7 @@ var myApp = angular.module('app', [])
         }
 
     });
-    myApp.controller("FormCtrl", function($scope){
+    myApp.controller("FormCtrl", function($scope, dataService){
         $scope.is_articleAdded = false;
         
         function Article() {

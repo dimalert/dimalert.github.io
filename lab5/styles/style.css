@@ -101,6 +101,15 @@ button:active {
 .button_add {
     display: none!important;
 }
+.filter {
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 @media all and (max-width: 640px) {
 
     .articles_set {
