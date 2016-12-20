@@ -3,7 +3,7 @@
 angular.module('app')
 .directive('article', function() {
     return {
-        temlateUrl: 'templates/article.html',
+        templateUrl: 'templates/article.html',
         replace: true,
         controller: 'mainCtrl'
     };
