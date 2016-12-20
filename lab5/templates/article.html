@@ -1,0 +1,12 @@
+<div class="articles">
+        <div class="articles_set" ng-repeat="article in articles | limitTo : filter">
+            <img src={{article.multimedia[4].url}}>
+            <a href={{article.url}}>{{article.title}}</a>
+            <p class="list-group-item-text">{{article.abstract}}</p>
+        </div>
+
+        <div class="filter">
+            <h2>Filter count of news</h2>
+            <input class="input_form" style="width: 80%" type="text"  ng-model="filter" value="1"></input>
+        </div>
+</div>
