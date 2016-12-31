@@ -1,8 +1,15 @@
+(function(angular) {
 'use strict';
 
-var myApp = angular.module('app', []);
+// angular.module('app', ['ngComponentRouter', 'posts', 'post-adding'])
+angular.module('app', ['ngComponentRouter', 'posts'])
+.config(function($locationProvider) {
+  $locationProvider.html5Mode({
+    enabled: true
+  });
+})
 
+.value('$routerRootComponent', 'app');
 
-
-
-    
+//angular.module('post-adding', []);
+})(window.angular);

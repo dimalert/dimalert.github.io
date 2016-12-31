@@ -1,0 +1,8 @@
+<div class="wrap_singlearticle">
+        <div class="article_single">
+            <!--<a ng-link="[\'PostDetail\', {id: article.id}]">See in separate page...</a>-->
+            <a href={{$ctrl.article.url}}>{{$ctrl.article.title}}</a>
+            <img src={{$ctrl.article.multimedia[4].url}} >
+            <p class="list-group-item-text">{{$ctrl.article.abstract}}</p>
+        </div>
+</div>

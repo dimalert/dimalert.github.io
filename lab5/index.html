@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
@@ -10,42 +10,23 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="vendor/angular.js"></script>
     <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript">
+        angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+    </script>
 </head>
 
-<body ng-controller="mainCtrl">
-
-    <div class="b_header" ng-controller="formCtrl">
-
+<body ng-app="app">
+    <div class="b_header"'>
         <div class="logo">
             <img src="mock/logo.svg">
-            <div class="row_button" ng-class="{'button_add': is_articleAdded}">
-                <button class="Button" ng-click="is_articleAdded = true;">Add Article</button>
-            </div>
         </div>
-        
-        <div class="wrap_form" ng-show="is_articleAdded">
-
-            <label class="name_input">Title</label>
-            <input class="input_form" type="text" ng-model="article_adding.title">
-            <label class="name_input">Body</label>
-            <textarea class="input_form" type="text" ng-model="article_adding.abstract"></textarea>
-            <label class="name_input">Link</label>
-            <input class="input_form" ng-model="article_adding.url"" type="text">
-
-            <div>
-                <button ng-click="saveArticle();">Save</button>
-                <button ng-click="is_articleAdded = false;">Cancel</button>
-            </div>
-
-        </div>
+        <app></app>
     </div>
-
-    <article></article>
-   
+    <script src="https://unpkg.com/@angular/router@0.2.0/angular1/angular_1_router.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/form.js"></script>
     <script src="scripts/services/data.js"></script>
-    <script src="scripts/directives/article.js"></script>
+    <script src="scripts/controllers/posts.js"></script>
+    <script src="scripts/components/posts.js"></script>
+    <script src="scripts/components/app.js"></script>
 </body>
 </html>
