@@ -5,7 +5,7 @@ angular.module('posts', [])
   .service("dataService", DataService)
 
   .component('posts', {
-    template: '<h2>List of Posts</h2><ng-outlet></ng-outlet>',
+    template: '<ng-outlet></ng-outlet>',
     $routeConfig: [
       {path:'/',    name: 'PostsList',   component: 'postList', useAsDefault: true},
       {path:'/:id', name: 'PostDetail', component: 'postDetail'}
