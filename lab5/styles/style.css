@@ -1,6 +1,7 @@
-body{
+body {
     background: #f6f6f6;
 }
+
 .articles {
     display: flex;
     padding-top: 150px;
@@ -12,6 +13,7 @@ body{
     max-width: 1080px;
     margin: 0 auto;
 }
+
 .wrap_singlearticle {
     display: flex;
     padding-top: 50px;
@@ -23,21 +25,25 @@ body{
     max-width: 1080px;
     margin: 0 auto;
 }
+
 .articles_set {
     max-width: 320px;
     min-height: 480px;
-    padding-left: 50px; 
+    padding-left: 50px;
 }
+
 .article_single {
     max-width: 70%;
     padding-left: 50px;
-    padding-right:  50px; 
+    padding-right: 50px;
 }
+
 img {
     width: 100%;
     height: auto;
     padding-bottom: 20px;
 }
+
 a {
     font-family: times;
     font-size: 19px;
@@ -45,15 +51,18 @@ a {
     color: black;
     text-decoration: none;
 }
+
 a:hover {
     color: #d26028;
 }
+
 p {
     padding-top: 20px;
     font-family: times;
     font-weight: 300;
     font-size: 16px;
 }
+
 .b_header {
     display: flex;
     flex-direction: column;
@@ -66,9 +75,11 @@ p {
     top: 0;
     overflow-x: hidden;
 }
-.logo img{
+
+.logo img {
     max-width: 300px;
 }
+
 .logo {
     padding: 20px;
     display: flex;
@@ -79,26 +90,31 @@ p {
     width: 100%;
     max-height: 80px;
 }
+
 button {
     font-weight: 700;
     color: white;
     text-decoration: none;
     padding: .8em 1em calc(.8em + 3px);
     border-radius: 3px;
-    background: rgb(64,199,129);
-    box-shadow: 0 -3px rgb(53,167,110) inset;
+    background: rgb(64, 199, 129);
+    box-shadow: 0 -3px rgb(53, 167, 110) inset;
     transition: 0.2s;
 }
-button:hover { 
-    background: rgb(53, 167, 110); 
+
+button:hover {
+    background: rgb(53, 167, 110);
 }
+
 button:active {
-  background: rgb(33,147,90);
-  box-shadow: 0 3px rgb(33,147,90) inset;
+    background: rgb(33, 147, 90);
+    box-shadow: 0 3px rgb(33, 147, 90) inset;
 }
+
 .row_button {
     padding-bottom: 20px;
 }
+
 .wrap_form {
     display: flex;
     padding-bottom: 20px;
@@ -107,6 +123,7 @@ button:active {
     align-items: center;
     flex-wrap: wrap;
 }
+
 .input_form {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -115,9 +132,11 @@ button:active {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 .button_add {
     display: none!important;
 }
+
 .filter {
     padding-bottom: 20px;
     width: 100%;
@@ -127,12 +146,20 @@ button:active {
     align-items: center;
     flex-wrap: wrap;
 }
-@media all and (max-width: 640px) {
 
+nav {
+    margin-bottom: 20px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #1171a3;
+}
+@media all and (max-width: 640px) {
     .articles_set {
         max-width: 100%;
         min-height: 480px;
         padding-left: 10px;
-        padding-right: 10px; 
+        padding-right: 10px;
     }
 }
