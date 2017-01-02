@@ -27,4 +27,9 @@ function DataService() {
     }
   };
 
+  this.addPost = function(article) {
+    articles.push(article);
+    articles[articles.length - 1].id = articles.length - 1;
+  }
+
 }

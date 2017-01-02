@@ -1,0 +1,12 @@
+<div class="wrap_form">
+    <label>Title</label>
+    <input class="input_form" placeholder="Title" ng-model="$ctrl.article.title">
+    <label>Short Description</label>
+    <input class="input_form" placeholder="Description" ng-model="$ctrl.article.abstract">
+    <label>Link</label>
+    <input class="input_form" placeholder="http://www.nytimes.com/" ng-model="$ctrl.article.url">
+    <div class="wrap_button"> 
+        <button ng-click="$ctrl.saveArticle();">Save</button>
+        <button>Cancel</button>
+    </div>
+</div>

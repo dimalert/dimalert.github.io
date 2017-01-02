@@ -11,7 +11,7 @@
       '<ng-outlet></ng-outlet>\n',
       $routeConfig: [
         { path: '/posts-list/...', name: 'PostsList', component: 'posts', useAsDefault: true },
-        { path: '/form/...', name: 'Form', component: 'post-adding' }
+        { path: '/form/...', name: 'Form', component: 'postAdding' }
       ]
     });
 })(window.angular);
