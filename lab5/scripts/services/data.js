@@ -27,9 +27,12 @@ function DataService() {
     }
   };
 
-  this.addPost = function(article) {
-    articles.push(article);
-    articles[articles.length - 1].id = articles.length - 1;
+  this.addPost = function (article) {
+    article.id = 0;
+    articles.unshift(article);
+    for (let i = 0; i < articles.length; i++) {
+      articles[i].id = i;
+    }
   }
 
 }

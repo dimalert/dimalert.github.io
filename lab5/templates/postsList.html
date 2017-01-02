@@ -1,8 +1,9 @@
 <div class="articles" ng-if="$ctrl.articles.length">
-    <div class="articles_set" ng-repeat="article in $ctrl.articles | limitTo : filter" ng-click="$ctrl.onSelect(article)">
+    <div class="articles_set" ng-repeat="article in $ctrl.articles | limitTo : filter">
         <img src={{article.multimedia[4].url}}>
         <a href={{article.url}}>{{article.title}}</a>
         <p class="list-group-item-text">{{article.abstract}}</p>
+        <a class="icon-magnifying-glass" ng-click="$ctrl.onSelect(article)">On ePage</a>
     </div>
 
     <div class="filter">

@@ -18,8 +18,8 @@ body {
     display: flex;
     padding-top: 50px;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     background-color: white;
     max-width: 1080px;
@@ -33,9 +33,13 @@ body {
 }
 
 .article_single {
-    max-width: 70%;
+    max-width: 40%;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.wrap_description {
+    max-width: 50%;
 }
 
 img {
@@ -156,8 +160,19 @@ nav a:hover {
     background-color: #1171a3;
 }
 
-nav a>a{
+nav>a>a {
     margin-left: 20px;
+}
+
+.icon-magnifying-glass {
+    color: #818181;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.icon-magnifying-glass:hover {
+    color: black;
+    cursor: pointer;
 }
 
 @media all and (max-width: 640px) {

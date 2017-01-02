@@ -3,6 +3,10 @@
         <!--<a ng-link="[\'PostDetail\', {id: article.id}]">See in separate page...</a>-->
         <a href={{$ctrl.article.url}}>{{$ctrl.article.title}}</a>
         <img src={{$ctrl.article.multimedia[4].url}}>
+    </div>
+    <div class="wrap_description">
+        <p class="list-group-item-text">Type: {{$ctrl.article.material_type_facet}}</p>
+        <p class="list-group-item-text">Section: {{$ctrl.article.section}}</p>
         <p class="list-group-item-text">{{$ctrl.article.abstract}}</p>
     </div>
 </div>

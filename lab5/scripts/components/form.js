@@ -12,6 +12,7 @@
 
         .component('formPost', {
             templateUrl: 'templates/form.html',
+            bindings: { $router: '<' },
             controller: FormComponent
         })
 })(window.angular);
