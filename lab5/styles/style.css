@@ -148,13 +148,18 @@ button:active {
 }
 
 nav {
+    display: flex;
     margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav a:hover {
     color: white;
     background-color: #1171a3;
 }
+
 @media all and (max-width: 640px) {
     .articles_set {
         max-width: 100%;
