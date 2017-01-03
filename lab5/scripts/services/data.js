@@ -1,5 +1,4 @@
 'use strict';
-var URL = 'https://api.nytimes.com/svc/topstories/v1/travel.json?api-key=7f64edc5d0804574800d7a8b9da058ad';
 
 function DataService() {
 
@@ -12,6 +11,7 @@ function DataService() {
         console.log('Fetch Error :-S', err);
       });
   };
+  
   this.getArt = function () {
     return articles;
   };
@@ -34,5 +34,4 @@ function DataService() {
       articles[i].id = i;
     }
   }
-
 }
