@@ -42,11 +42,7 @@ function PostsListComponent(dataService) {
     this.multimedia = [, , , , { url: "mock/cap.jpg" }];
     this.abstract = "";
   }
-
-  this.pushArticle = function () {
-    ctrl.articles.shift(new Article());
-  }
-
+  
   this.isSelected = function (article) {
     return (article.id === selectedId);
   };
@@ -54,8 +50,6 @@ function PostsListComponent(dataService) {
   this.onSelect = function (article) {
     this.$router.navigate(['PostDetail', { id: article.id }]);
   };
-
-
 }
 
 function PostDetailComponent(dataService) {
@@ -69,11 +63,9 @@ function PostDetailComponent(dataService) {
 
   this.gotoArticles = function () {
     var articleId = ctrl.articles && ctrl.article.id;
-    // Pass along the hero id if available
-    // so that the CrisisListComponent can select that hero.
+    // Pass along the article id if available
+    // so that the PostsListComponent can select that post.
     this.$router.navigate(['PostsList', { id: articleId }]);
   };
-
-
 }
 
