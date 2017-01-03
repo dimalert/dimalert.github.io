@@ -13,7 +13,7 @@ function FormComponent(formService) {
     ctrl.article = {};
 
     this.$routerOnActivate = function(next) {
-        ctrl.article = new Article;
+        ctrl.article = new Article();
     };
 
     this.saveArticle = function() {
