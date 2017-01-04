@@ -56,7 +56,7 @@ function PostDetailComponent(dataService) {
   var ctrl = this;
   ctrl.article = {};
   this.$routerOnActivate = function (next) {
-    // Get the crisis identified by the route parameter
+    // Get the articles identified by the route parameter
     var id = next.params.id;
     ctrl.article = dataService.getArticle(id);
   };
